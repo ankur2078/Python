@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Employee Details</title>
+
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th> Employee Id</th>
+            <th> Employee Name</th>
+            <th> Employee Email</th>
+            <th> Employee Contsct</th>
+            <th> Action</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{employee.id}}</td>
+            <td>{{employee.ename}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.econtact}}</td>
+            <td>
+                <a href="/edit/{{employee.id}}" >Edit</a>
+                <a href = "/delete/{{employee.id}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+<br><br>
+    <a href="/emp">Add New Records</a>
+
+</body>
+</html>

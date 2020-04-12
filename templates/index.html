@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+
+
+</head>
+<body>
+    <form method="POST" class="post-form" action="/emp">
+        {% csrf_token %}
+        <div class="container">
+            <h3> Enter Employee Details</h3> <br><br>
+            <label>Employee Id :</label><br>
+            <div>{{form.eid}}</div>
+
+            <label>Employee Name :</label><br>
+            <div>{{form.ename}}</div>
+
+            <label>Employee Email :</label><br>
+            <div>{{form.email}}</div>
+
+            <label>Employee Contact :</label><br>
+            <div>{{form.econtact}}</div>
+
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
